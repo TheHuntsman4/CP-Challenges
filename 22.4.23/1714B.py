@@ -1,15 +1,12 @@
-a= [3,4,1,3]
-count=0
-n=(int(len(a)))
-for i in range(0,n):
-    for j in range(i,n):
-        if (a[i]==a[j]):
-            a.pop(i)
-            i=i-1
+n=int(input())
+for i in range(n):
+    l=int(input())
+    a=list(map(int, input().split(' ')))
+    count=0
+    while(len(a)>0):
+        if(len(set(a))==len(a)):
+            print(count)
+            break
+        else:
+            a.pop(0)
             count+=1
-        
-print(count)
-# for i in range(0,int(len(a))):
-#     if(int(a[i]) in a):
-#         a.pop(i)
-# print(len(a))
